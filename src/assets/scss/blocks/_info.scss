@@ -1,0 +1,30 @@
+.info{
+    font-size: 18px;
+    position: relative;
+
+    &--tel,&--adress{
+        padding-left: 35px;
+        &::before{
+            content:'';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    &--tel::before{
+        background-image: url('../images/header/phone-call.svg');
+    }
+    &--adress::before{
+        background-image: url('../images/header/map.svg');
+    }
+
+}
+
+.header__footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
