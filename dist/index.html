@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/main.css">
+    <script defer src="assets/js/main.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <header class="header none1">
+    <header class="header none">
         <div class="header__top">
             <div class="container">
                 <div class="header__top-row">
@@ -29,7 +30,11 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="header__nav-btn">Кнопка</div>
+                    <div class="header__nav-btn">
+                        <button class="nav-icon-btn">
+                            <div class="nav-icon"></div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,7 +59,7 @@
     </header>
 
     <main>
-        <section class="benefits none">
+        <section class="benefits">
             <h2 class="visually-hidden">Преимущества ЖК</h2>
             <div class="container container--sm">
                 <div class="benefits__row">
@@ -82,7 +87,7 @@
             </div>
         </section>
 
-        <section class="appartments none">
+        <section class="appartments">
             <div class="container">
                 <div class="appartments__title">
                     <h2 class="title-2">Наши квартиры</h2>
@@ -112,7 +117,7 @@
             </div>
         </section>
 
-        <section class="cta none">
+        <section class="cta">
             <div class="container">
                 <div class="cta__title">
                     <h2 class="title-2">Хотите посмотреть?</h2>
@@ -126,8 +131,8 @@
 
                         <form action="" class="form cta__form">
                             <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                            <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
-                            <p class="form__privacy">*Мы никому не передаем ваши данные. <br>
+                            <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off" data-tel-input>
+                            <p class="form__privacy form__privacy--bottom">*Мы никому не передаем ваши данные. <br>
                                 И не сохраняем ваш номер в базу.</p>
                             <button type="submit" class="form__btn" placeholder="Посмотреть район">Посмотреть район</button>
                         </form>
@@ -136,12 +141,12 @@
             </div>
         </section>
 
-        <section class="video none">
+        <section class="video">
             <h2 class="visually-hidden">
                 Видео про ЖК
             </h2>
             <div class="container">
-              <a href="!#" class="video__link">
+              <a href="https://youtu.be/-YAzSex8zIo" class="video__link" data-youtubeLightbox>
                 <img src="assets/images/video/play-video.svg" alt="play-video" class="video__icon">
                 <img src="assets/images/video/video_bg.jpg" alt="play-video" class="video__img">
               </a>
@@ -149,7 +154,7 @@
             </div>
         </section>
 
-        <section class="section-map none">
+        <section class="section-map">
             <div class="container">
                 <div class="section-map__title">
                     <h2 class="title-2">Район на карте</h2>
@@ -160,23 +165,23 @@
             </div>
         </section>
 
-        <section class="feedback none">
+        <section class="feedback">
             <div class="container">
                 <div class="feedback__title">
                     <h2 class="title-2">Есть вопросы?</h2>
                 </div>
                 <form action="" class="feedback__form">
-                    <p class="form__privacy">*Мы никому не передаем ваши данные. <br>
+                    <p class="form__privacy form__privacy--bottom">*Мы никому не передаем ваши данные. <br>
                         И не сохраняем ваш номер в базу.</p>
                     <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                    <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
+                    <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off" data-tel-input>
                     <button type="submit" class="form__btn" placeholder="Посмотреть район">Посмотреть район</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__logo">
@@ -225,6 +230,15 @@
             </div>
         </div>
     </footer>
+
+     <!-- YouTube LightBox -->
+     <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

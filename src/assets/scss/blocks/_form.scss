@@ -14,16 +14,23 @@
     &::placeholder {
         color: $placeholder;
     }
-    &:focus{
+
+    &:focus {
         background-color: rgba(255, 255, 255, 0.3);
     }
 }
 
 .form__privacy {
     font-size: 13px;
-    color:$muted;
+    color: $muted;
     text-align: center;
     line-height: 1.23;
+
+    &--bottom {
+        @include mediaTablet {
+            grid-row: 4/5;
+        }
+    }
 }
 
 .form__btn {
@@ -33,10 +40,11 @@
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-    background-color:$accent;
+    background-color: $accent;
     padding: 12px;
     transition: background-color .2s ease-in;
-    &:hover{
-        background-color:saturate($color: $accent, $amount: 10%);
+
+    &:hover {
+        background-color: saturate($color: $accent, $amount: 10%);
     }
 }
