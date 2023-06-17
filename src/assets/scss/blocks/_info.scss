@@ -8,9 +8,12 @@
             content:'';
             position: absolute;
             left: 0;
-            top: 0;
+            top: 50%;
+            transform: translate(0%, -50%);
             width: 21px;
             height: 21px;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 
@@ -20,11 +23,23 @@
     &--adress::before{
         background-image: url('../images/header/map.svg');
     }
-
+    @include mediaTablet {
+        font-size: 14px;
+        &--tel,&--adress{
+            padding-left: 26px;
+        }
+    }
 }
 
 .header__footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @include mediaTablet {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        row-gap: 30px;
+
+    }
 }
